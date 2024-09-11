@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us Form with Error</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-semibold text-gray-800 mb-6">Contact Us</h1>
+
+    <form action="#" method="POST" class="space-y-4">
+      <!-- First Name and Last Name -->
+      <div class="flex space-x-4">
+        <div class="flex-1">
+          <label for="first-name" class="block text-sm font-medium text-gray-700">First Name *</label>
+          <input type="text" id="first-name" name="first-name" class="mt-1 block w-full p-2 border border-red-500 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" required>
+          <p class="text-sm text-red-600 mt-1">This field is required</p>
+        </div>
+        <div class="flex-1">
+          <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name *</label>
+          <input type="text" id="last-name" name="last-name" class="mt-1 block w-full p-2 border border-red-500 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" required>
+          <p class="text-sm text-red-600 mt-1">This field is required</p>
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+        <input type="email" id="email" name="email" value="email#example.com" class="mt-1 block w-full p-2 border border-red-500 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" required>
+        <p class="text-sm text-red-600 mt-1">Please enter a valid email address</p>
+      </div>
+
+      <!-- Query Type -->
+      <div>
+        <span class="block text-sm font-medium text-gray-700">Query Type *</span>
+        <div class="mt-2 space-x-6">
+          <label class="inline-flex items-center">
+            <input type="radio" name="query-type" value="general-enquiry" class="form-radio text-green-600 focus:ring-red-500" required>
+            <span class="ml-2 text-gray-700">General Enquiry</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="query-type" value="support-request" class="form-radio text-green-600 focus:ring-red-500" required>
+            <span class="ml-2 text-gray-700">Support Request</span>
+          </label>
+        </div>
+        <p class="text-sm text-red-600 mt-1">Please select a query type</p>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+        <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-red-500 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" required></textarea>
+        <p class="text-sm text-red-600 mt-1">This field is required</p>
+      </div>
+
+      <!-- Consent -->
+      <div class="flex items-center">
+        <input type="checkbox" id="consent" name="consent" class="form-checkbox text-green-600 focus:ring-red-500" required>
+        <label for="consent" class="ml-2 block text-sm text-gray-700">I consent to being contacted by the team *</label>
+      </div>
+      <p class="text-sm text-red-600 mt-1">To submit this form, please consent to being contacted</p>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit" class="w-full bg-green-600 text-white p-2 rounded-md shadow hover:bg-green-700 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
